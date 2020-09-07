@@ -12,7 +12,6 @@ import torchvision
 from torchvision import datasets, models, transforms
 import PIL
 
-#export_file_url = 'https://aidris559lab4.s3.amazonaws.com/Trained_Model_For_Ant_And_Bees/full_model_export1.pkl'
 export_file_url = 'https://coc-simpsons-img-class-model.s3.eu-west-2.amazonaws.com/full_model_export1.pkl'
 export_file_name = 'full_model_export1.pkl'
 
@@ -21,14 +20,12 @@ data_transforms_with_normalization = {
         transforms.RandomResizedCrop(224),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
-        #transforms.Normalize([0.5052, 0.4579, 0.3312], [0.2724, 0.2566, 0.277])
         transforms.Normalize([0.5052, 0.4554, 0.3479], [0.2572, 0.2333, 0.2717])
     ]),
     'val': transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
-        #transforms.Normalize([0.5052, 0.4579, 0.3312], [0.2724, 0.2566, 0.277])
         transforms.Normalize([0.5052, 0.4554, 0.3479], [0.2572, 0.2333, 0.2717])
     ]),
 }
@@ -81,7 +78,6 @@ async def homepage(request):
 async def analyze(request):
     img_data = await request.form()
     img_bytes = await (img_data['file'].read())
-    # img = open_image(BytesIO(img_bytes))
     img = PIL.Image.open(BytesIO(img_bytes))
     print("We came here 1")
     transform = data_transforms_with_normalization['val']
