@@ -20,13 +20,13 @@ data_transforms_with_normalization = {
         transforms.RandomResizedCrop(224),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
-        transforms.Normalize([0.5052, 0.4554, 0.3479], [0.2572, 0.2333, 0.2717])
+        transforms.Normalize([0.5320, 0.4546, 0.3466], [0.2582, 0.2336, 0.2717])
     ]),
     'val': transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
-        transforms.Normalize([0.5052, 0.4554, 0.3479], [0.2572, 0.2333, 0.2717])
+        transforms.Normalize([0.5320, 0.4546, 0.3466], [0.2582, 0.2336, 0.2717])
     ]),
 }
 
