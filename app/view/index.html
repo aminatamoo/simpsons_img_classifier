@@ -1,40 +1,42 @@
 <html lang='en'>
-<head>
-  <meta charset='utf-8'>
-  <link rel='stylesheet' href='../static/style.css'>
-  <script src='../static/client.js'></script>
-</head>
-<body>
-<div>
-  <div class='center'>
-    <div class='title'>Classify Simpsons Images</div>
-    <p>
-      Use images of <strong>Bart</strong>, <strong>Homer</strong>,<strong>Marge</strong>,<strong>Lisa</strong> or, <strong>Maggie</strong> Simpson
-    </p>
-    <div class='content'>
-      <div class='no-display'>
-        <input id='file-input'
-               class='no-display'
-               type='file'
-               name='file'
-               accept='image/*'
-               onchange='showPicked(this)'>
-      </div>
-      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
-      <div class='upload-label'>
-        <label id='upload-label'>No file chosen</label>
-      </div>
-      <div>
-        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-      </div>
-      <div class='analyze'>
-        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
-      </div>
-      <div class='result-label'>
-        <label id='result-label'></label>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='../static/style.css'>
+  </head>
+  <body>
+    <div>
+      <div class='center'>
+        <div class='title'>Classify Simpsons Images</div>
+        <p>
+          Use images of <strong>Bart</strong>, <strong>Homer</strong>,<strong>Marge</strong>,<strong>Lisa</strong> or, <strong>Maggie</strong> Simpson
+        </p>
+        <div class='content'>
+          <div class='no-display'>
+            <input id='file-input'
+                   class='no-display'
+                   type='file'
+                   name='file'
+                   accept='image/*'
+                   onchange='showPicked(this)'>
+          </div>
+          <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+          <div class='upload-label'>
+            <label id='upload-label'>No file chosen</label>
+          </div>
+          <div>
+            <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+          </div>
+          <div class='analyze'>
+            <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+          </div>
+          <div class='result-label'>
+            <label id='result-label'></label>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</body>
+    <script src='../static/client.js'></script>
+  </body>
 </html>
