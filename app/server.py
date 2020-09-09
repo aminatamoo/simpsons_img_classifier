@@ -79,14 +79,11 @@ async def analyze(request):
     img_data = await request.form()
     img_bytes = await (img_data['file'].read())
     img = PIL.Image.open(BytesIO(img_bytes))
-    print("We came here 1")
     transform = data_transforms_with_normalization['val']
     x = transform(img)
     x = x.unsqueeze(0)
     output = learn(x)
-    print("We came here 2")
     pred = torch.argmax(output, 1)
-    print("We came here 3")
     return JSONResponse({'result': classes[pred.item()]})
 
 
