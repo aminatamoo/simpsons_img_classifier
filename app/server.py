@@ -77,7 +77,6 @@ async def homepage(request):
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
     img_data = await request.form()
-    print(img_data['file'])
     img_bytes = await (img_data['file'].read())
     img = PIL.Image.open(BytesIO(img_bytes))
     transform = data_transforms_with_normalization['val']
