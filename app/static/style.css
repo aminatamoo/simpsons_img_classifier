@@ -9,17 +9,17 @@ body {
 }
 
 .center {
-    margin-top: 19vh;
+    margin-top: 22vh;
     padding: 10px 50px;
     text-align: center;
     font-size: 14px;
 }
 
 .title {
-    font-size: 30px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: #262626;
+  font-size: 30px;
+  margin-top: 1em;
+  margin-bottom: 1.4em;
+  color: #262626;
 }
 .description {
   color: yellow;
@@ -31,7 +31,7 @@ body {
 }
 
 .content {
-    margin-top: 10em;
+    margin-top: 8em;
 }
 
 .analyze {
