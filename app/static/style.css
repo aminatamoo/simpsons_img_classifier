@@ -4,12 +4,9 @@ body {
     background-size:cover;
 }
 
-label {
+#result-label {
     font-size: 2rem;
     font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-#result-label {
     border: 5px solid yellow;
     border-radius: 20px;
     padding: 3vh;
